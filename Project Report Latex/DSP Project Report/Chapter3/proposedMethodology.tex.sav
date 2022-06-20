@@ -1,0 +1,161 @@
+\chapter{Proposed Methodology}
+\label{chap3}
+
+In the previous chapter, we have discussed the theories that support this
+research related to the speech processing using MATLAB . In this chapter we will proposed our methodology for this project.\\\\
+Basically we are following the given below question step by step.
+In this Matlab problem you will see the effects of Decimation \& Interpolation on an
+audio signal.\\
+Record your speech of about 5 seconds at sampling frequency of 32 kHz.
+You can use either ‘wavrecord()’ MATLAB function or windows sound recorder for
+this purpose.\\
+If you use Sound Recorder, then u need to first set its properties for recording sound
+at 32 kHz and single channel.\\
+\begin{enumerate}
+\item Plot the time and frequency domain magnitude spectrums of this speech signal.
+(Use ‘wavread()’ to read the speech signal. Use ‘freqz()’ to plot the frequency
+spectrum). What is highest frequency of this signal? Play this signal using
+‘wavplay()’.
+%
+\item Decimate the signal by a factor of 2. Again plot the time and frequency domain
+spectrum of the signal. Play the sound. What do you observe?
+%
+\item Again decimate the signal by a factor of 2. Plot the time and frequency domain
+spectrum of the signal. Play the sound. What do you observe?
+%
+\item Now interpolate the signal by a factor of 2. Plot the time and frequency domain
+spectrum of the signal. Play the sound. What do you observe?
+%
+\item Again interpolate the signal by a factor of 2. Plot the time and frequency domain
+spectrum of the signal. Play the sound. What do you observe?
+%
+\end{enumerate}
+
+\section{Block Diagram}
+Let us look at the simplified block diagram in Figure \ref{blockDiagram}, which illustrates the main components involved
+in recording an audio signal with MATLAB. A microphone converts acoustic sound waves (which are
+essentially variations in air pressure over time) into continuous electronic signals (voltages). These
+voltages are then filtered using a so-called low-pass filter with cut-off frequency fs/2.\\\\\\
+ In non-technical terms, frequencies in the analog voltage signal higher than fs/2 will be removed completely—frequencies
+below fs/2 are left untouched. The filtered signal is then sampled at a sampling rate of fs
+in a so-called analog-to-digital converter (ADC, for short). Since frequencies higher than fs/2 cannot be represented
+when sampling a continuous signals, the low-pass filter is essential in the sampling process. (Maybe you
+recall the activity above where you sampled your voice at fs = 32000 Hz; high frequencies were completely
+filtered out!) The digitized samples are then transmitted to MATLAB and stored in a vector.
+\begin{figure}[H]  %h=positioning
+\begin{center}
+\includegraphics[scale=0.70]{Chapter3/blockDiagram}
+\caption{Simplified block diagram of a microphone, sound-card, and computer. The microphone converts
+air pressure into voltages, which are filtered and sampled. The samples are then transferred to MATLAB.}
+\label{blockDiagram}
+\end{center}
+\end{figure}
+
+\section{Flow Diagram}
+Figure \ref{flowDiagram} shows the flow of the decimate function. In this project decimate function is the main function which we are using to process our signal with different factors.Decimation reduces the original sampling rate for a sequence to a lower rate, the opposite of interpolation. The decimation process filters the input data with a low pass filter and then resamples the resulting smoothed signal at a lower rate.\\\\
+y = decimate(x,r) reduces the sample rate of x, the input signal, by a factor of r. The decimated vector, y, is shortened by a factor of r so that \\
+\centering{$length(y) = ceil(length\frac{x}{r})$}\\ 
+By default, decimate uses a low pass Chebyshev Type I infinite impulse response (IIR) filter of order 8.
+
+\begin{figure}[H]  %h=positioning
+\begin{center}
+\includegraphics[scale=0.95]{Chapter3/DecimateASignalExample2}
+\caption{Example of Decimating A Signal }
+\label{DecimateASignalExample}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]  %h=positioning
+\begin{center}
+\includegraphics[scale=0.70]{Chapter3/flowDiagram}
+\caption{Flow Diagram of the Project}
+\label{flowDiagram}
+\end{center}
+\end{figure}
+
+\section{System Model}
+The developed AMR system consists of three main parts: a
+digital power meter installed in every individual
+consumer unit, transmission facility (GPRS), and
+billing server at the energy provider side. Overview and
+functional block details are shown in Fig.
+%any image in which we can demonstrate our project
+
+
+\section{Pseudocode of The Project/Algorithms}
+
+Our project is target to make a smart Automatic Meter Reader which will automatically read the reading in run time and it will send the data back to the servers from where user interference will be given to the user and they will be able to see their bills, units and other details about their meter in run time.\\
+begin:\\
+    input: meter Reading\\
+    output: make data accessible to the user\\
+    step 1 : Recognition of the digital Area\\
+    step 2 : \\
+    if\{\\
+        recognition test = pass\\
+        go to step 3\\
+    \}\\
+    end if \\
+    else\{\\
+        go to step 2\\
+    \}\\
+    end else \\
+    step 3:
+    transferring data to the database using GPRS.\\
+    step 4:User interface for customer and administration
+    \\
+end
+\section{Mathematical Modeling}
+Consider this equation\\
+\begin{center}
+$G(x,y) = T(f(x,y))$
+\end{center}
+In this equation,\\
+F(x,y) = input image on which transformation function has to be applied.\\
+G(x,y) = the output image or processed image.\\
+T is the transformation function.\\
+This relation between input image and the processed output image can also be represented as.\\
+\begin{equation}
+s=T(r)
+\end{equation}
+Where r is actually the pixel value or gray level intensity of f(x,y) at any point, and s is the pixel value or gray level intensity of g(x:y) at any point. \\
+Calculates the normalize histogram using equation \ref{eq2}, or pixel distribution, of an image, and it can
+applied to convert color (gray-level) images into a black and
+white one.\\
+
+\begin{equation}
+\label{eq2}
+p(r_{k})=\frac{n_{k}}{n}
+\end{equation}
+
+\section{Component Selection}
+Following are the component which we have used in this project. \\
+\begin{enumerate}
+\item Electric Meter
+%
+\item Raspberry Pi
+%
+\item GPRS
+%
+\item Computer
+%
+%
+\end{enumerate}
+While selecting the component we try to make the component choices which are comparably cheap but also have much more advantages.
+\section{Hardware and Software Setup}
+It is necessary to have additional knowledge when purchasing components, as not
+all components are equal in quality nor are all of them compatible with each other. Before purchasing, it is
+necessary to additionally inform oneself about the material that wants to be bought, figure out what is
+necessary, and what quality should be satisfied. Software is also the OS and is based mainly on the JAVA
+programming language. The programming tool for programming Raspberry Pi motherboard is available in all
+portals that deal with Raspberry Pi products.
+\subsection{Hardware}
+Firstly, the primary side of AMR system is explained. Our electric meter is connected to Raspberry Pi, which will be acting as a micro processor to process different operation according to our requirements as shown in Fig.
+Here is the little description of the RASPBERRY PI 4B/4GB, Raspberry Pi 4 Model B 4GB SDRAM Evaluation Board based on BCM2711 Cortex-A72 Processor, features 2.4 GHz and 5.0 GHz IEEE 802.11b/g/n/ac Wireless LAN, Bluetooth 5.0, BLE.
+GPRS module is connected with Raspberry Pi in a way so that it will transfer data from one point to another, A GPRS module is showing in Fig. \ref{GPRS}.
+
+The computer on which the server of applications is carried out for collecting information is HP ProBook 645 G1 with 8 GB of RAM, Processor: AMD A6-5350M APU with Radeon(tm) HD Graphics    (2 CPUs), ~2.9GHz. Regardless of the platform that is used in the role of the server,
+application will be performed with no difficulties. In the event of a problem with hardware, one can simply
+switch application to a different hardware and resume operation. Fig. \ref{hpProbook645} shows the HP Probook 645 G1.
+
+\subsection{Software}
+To code on Raspberry Pi we use python language, and it's the official recommended language for the new coders especially.

@@ -1,0 +1,33 @@
+\chapter{Conclusion and Future Work}
+\label{chap5}
+In the previous chapter, we have shown all the simulation and results of our proposed project. From introduction, Literature Review, Proposed Methodology, Result and Simulations. In this chapter, we will conclude our project and will
+\section{Conclusion}
+This work describes the COMSATS University Islamabad, Attock Campus Network. We have:
+\begin{enumerate}
+\item Successfully simulated our topology using Cisco Packet Tracer.
+%
+\item Learned basic knowledge of how department communicate with each other in any organization.
+%
+\item Discussed a real life university scenario. 
+%
+\end{enumerate}
+In this project, we have done following tasks:
+\begin{enumerate}
+\item Planned, designed, and prototyped the network topology for our university i.e., COMSATS University Islambad, Attock Campus.
+%
+\item Configured the network in Cisco Packet Tracer with appropriate settings to acheive the connectivity and functionalities.
+%
+\end{enumerate}
+
+\section{Future Work}
+Speech processing using MATLAB can be done in many other ways and the current method/project can be improve in many ways. Following are the some of the things we can try to improve this system:
+\begin{enumerate}
+\item Different method of the signal processing can be used to improve it.
+%
+\item High quality microphone can be used to improve the system accuracy.
+%
+%
+\item Instead of using wavrecord, wavplay we can create the same project with the updated commands like audiorecorder/getaudiodata in MATLAB.
+%
+\item We can try on implementing the processing technique on multi subjects.
+\end{enumerate}

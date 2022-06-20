@@ -1,0 +1,111 @@
+\documentclass[12pt, english]{report}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stackrel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage[noadjust]{cite}
+\usepackage{authblk}
+\usepackage{placeins}
+\usepackage{adjustbox}
+\usepackage{tabularx}
+\usepackage{graphics}
+\usepackage[nottoc]{tocbibind}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{babel}
+\usepackage[a4paper, total={6in, 10in}]{geometry}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{xfrac}
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% for fonts of Abstract  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\huge\bfseries}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Adding Biblography/lof/lit in table of content  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{tocbibind}
+
+\makeatletter
+
+\begin{document}
+
+\input{PrePages/projectCoverPage}
+\input{PrePages/projectDeclaration}
+%\input{PrePages/CertificateofApproval}
+%\input{PrePages/PlagiarismUnderTaking}
+%\input{PrePages/ListOfPublications}
+\input{PrePages/projectDedication}
+\input{PrePages/acknowledgement}
+\input{PrePages/projectAbstract}
+%\input{PrePages/emptypage}
+%\input{PrePages/Examiners}
+%\input{PrePages/Certificate}
+
+\pagenumbering{roman}
+\setcounter{page}{11}
+
+
+\tableofcontents{}
+\pagebreak{}
+%\listoffigures{}
+\pagebreak{}
+%\listoftables{}
+\pagebreak{}
+%\input{PrePages/nomenclature}
+%\newpage{}
+%\input{PrePages/ListofAbbreviations}
+
+
+\pagenumbering{roman}
+\setcounter{page}{23}
+
+\newpage{}
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Chapters  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Chapter1/introduction}
+\include{Chapter2/literatureReview}
+\include{Chapter3/proposedMethodology}
+\include{Chapter4/resultAndSimulation}
+\include{Chapter5/conclusionAndFutureDirection}
+
+%\include{Chapter6/Chapter6}
+%\include{Chapter8/Chapter8}
+%\include{Chapter7/Chapter7}
+
+\bibliographystyle{ieeetr}
+\bibliography{Ref}
+\end{document}

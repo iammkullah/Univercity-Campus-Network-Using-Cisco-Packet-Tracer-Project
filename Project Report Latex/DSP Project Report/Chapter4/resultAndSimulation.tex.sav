@@ -1,0 +1,24 @@
+\chapter{Simulation and Results}
+\label{chap4}
+In the previous chapter, we have discussed about our methodology for this project while giving details about block diagram, system model, flow chart, software selection of this project. In this chapter, we will provide the viewable logical topology, and results of the project.
+\section{Simulation Results}
+As discussed in the previous chapter in the section of software selection, we have used Cisco Packet Tracer to simulate our project.
+\subsection{Logical Topology}
+In the Fig. \ref{mainBranchCampus} a main branch topology is shown which contain three departments, Electrical and Computer Engineering Department, Mathematics Department, Admission Department, and a Cloud Server.
+\begin{figure}[H]  %h=positioning
+\begin{center}
+\includegraphics[scale=0.43]{Chapter4/mainBranchCampus}
+\caption{Main Branch Topology}
+\label{mainBranchCampus}
+\end{center}
+\end{figure}
+Whereas in Fig. \ref{branchCSDepartment}, department of Computer Science is shown which contains different offices and lab. The reason we called this COMSATS Branch Campus is because it is quite apart from the other department in this case we can consider this as a Branch Campus. We can include this in the main branch too but the reason of treating this as a campus is to learn how to connect campus network with the main network.
+\begin{figure}[H]  %h=positioning
+\begin{center}
+\includegraphics[scale=0.50]{Chapter4/branchCSDepartment}
+\caption{Branch Topology of CS Department}
+\label{branchCSDepartment}
+\end{center}
+\end{figure}
+\subsection{Statistical Analysis}
+\label{analysis}

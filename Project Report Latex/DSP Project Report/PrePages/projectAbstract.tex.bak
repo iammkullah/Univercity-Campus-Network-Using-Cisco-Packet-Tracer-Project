@@ -1,0 +1,23 @@
+
+\begin{abstract}
+
+\noindent Computer network in the recent time has continued to evolve  and has gone beyond just  a collection of interconnected devices. Networking  is a process of connecting computers, printers,  routers etc. over a medium  for  the  purpose  of  sharing information/resources. It is a very viable tool in the day-to-day running of an organisation. Research in data communication and networking has resulted in new technologies in which the goal is to be able to exchange  data  such  as  text,  audio,  video  etc. Recently, no good establishment can effectively and efficiently  work without  a  good computer  network or internet \cite{ezema2014plan}.\\\\
+
+\noindent Computer networks have a significant impact on the working of an organization. It participates not only on one
+side of life but in nearly every station, especially in educational organizations. The key aim of education is to share data and knowledge, making the network important for education. In particular, it is essential to ensure the exchange of information; thus, no one can corrupt it. To safe and trustworthy transfers between users, integrity and reliability are crucial
+questions in all data transfer problems \cite{ahmed2021designing}.\\\\ 
+
+\noindent University network is an important part of campus life and network security is essential for a campus. Campus
+network faces challenges to address core issues of security which are governed by network architecture. Secured network
+protects an institution from security attacks associated with network.\\\\
+
+\noindent Universities depend on the proper functioning and analysis of their networks for education, administration, communication,  e-library,  automation,  etc. An efficient network is essential to facilitate the systematic and cost-efficient transfer of information in an organization in the form of messages, files, and resources.  The project provides insights into various concepts such as topology design,  IP  address configuration, and how to send information in the form of packets to the wireless networks of different areas of a University.\\\\
+
+
+\noindent Therefore, we have developed a secure campus network (SCN) for sending and receiving information among high-security end-users. We created a topology for a campus of multi networks and virtual local area networks (VLANs’) using cisco packet tracer. We also introduced the most critical security configurations, the networking used in our architecture. We used a large number of protocols to protect and accommodate the users of the SCN scheme.\\\\
+
+
+\vspace{0.89mm}
+%\pagenumbering{roman}% added the roman page number in the starting pages
+\thispagestyle{empty}% to remove the page number
+\end{abstract}

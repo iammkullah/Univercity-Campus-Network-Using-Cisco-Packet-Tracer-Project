@@ -1,0 +1,112 @@
+\chapter{Simulation and Results}
+\label{chap4}
+In the previous chapter, we have discussed about our methodology for this project while giving details about block diagram, system model, flow chart, software selection of this project. In this chapter, we will provide the viewable logical topology, and results of the project.
+\section{Simulation Results}
+As discussed in the previous chapter in the section of software selection, we have used Cisco Packet Tracer to simulate our project.
+\section{Logical Topology}
+In the Fig. \ref{mainBranchCampus} a main branch topology is shown which contain three departments, Electrical and Computer Engineering Department, Mathematics Department, Admission Department, and a Cloud Server.
+\begin{figure}[H]  %h=positioning
+\begin{center}
+\includegraphics[scale=0.80]{Chapter4/mainBranchCampus}
+\caption{Main Branch Topology}
+\label{mainBranchCampus}
+\end{center}
+\end{figure}
+Whereas in Fig. \ref{branchCSDepartment}, department of Computer Science is shown which contains different offices and lab. The reason we called this COMSATS Branch Campus is because it is quite apart from the other department in this case we can consider this as a Branch Campus. We can include this in the main branch too but the reason of treating this as a campus is to learn how to connect campus network with the main network.
+\begin{figure}[H]  %h=positioning
+\begin{center}
+\includegraphics[scale=0.80]{Chapter4/branchCSDepartment}
+\caption{Branch Topology of CS Department}
+\label{branchCSDepartment}
+\end{center}
+\end{figure}
+\section{Statistical Analysis}
+\label{analysis}
+Frequency spectrum of Input signal and  input signal in time domain is Fig. \ref{result1} .
+\begin{figure}[H]  %h=positioning
+\begin{center}
+\includegraphics[scale=0.80]{Chapter4/result1}
+\caption{Comparison of Frequency Spectrum and Time Domain Graph of Input Signal }
+\label{result1}
+\end{center}
+\end{figure}
+
+The highest frequency of recorded speech signal is 327kHz from fft is Fourier Transform to find highest frequency of signal which is shown in Fig. \ref{result2}
+
+\begin{figure}[H]  %h=positioning
+\begin{center}
+\includegraphics[scale=0.65]{Chapter4/result2}
+\caption{Fourier Transform of the Input Signal }
+\label{result2}
+\end{center}
+\end{figure}
+Data transmitted per unit time is increased so does the speed of transmission or the speed
+of speech is increased. Another thing we observed by decimating by 2 is that the
+amplitude of frequency magnitude spectrum is got lowered from amplitude of original
+frequency magnitude spectrum.\\\\
+
+For example, if we take any sample point let’s say at 0.1,
+the amplitude of original frequency magnitude spectrum at that sample point is almost
+30dB but when decimated by 2 the amplitude of decimated frequency magnitude
+spectrum goes to 28dB. Therefore, speech is not that much clear to understand than
+original speech and time is reduced as shown in the Fig. \ref{result3}.
+
+\begin{figure}[H]  %h=positioning
+\begin{center}
+\includegraphics[scale=0.90]{Chapter4/result3}
+\caption{Comparison of Frequency Spectrum and Time Domain Graph of Input Signal After Decimating by 2 }
+\label{result3}
+\end{center}
+\end{figure}
+Data transmitted rate is much more increased. By decimating by 4 the amplitude of
+frequency magnitude spectrum is got much lowered from amplitude of original frequency
+magnitude spectrum.\\\\
+ For example, if we take any sample point let’s say at 0.1, the amplitude of original frequency magnitude spectrum at that sample point is almost 30dB but when decimated by 4 the amplitude of decimated frequency magnitude spectrum goes
+to 25dB. The decimated speech is very rough and not clear enough to understand because
+time is more decreased as shown in the Fig. \ref{result4}.
+
+\begin{figure}[H]  %h=positioning
+\begin{center}
+\includegraphics[scale=0.90]{Chapter4/result4}
+\caption{Comparison of Frequency Spectrum and Time Domain Graph of Input Signal After Decimating by 4 }
+\label{result4}
+\end{center}
+\end{figure}
+
+
+Decimation reduces the original sample rate of a sequence to a lower rate. It is the opposite of interpolation. decimate lowpass filters the input to guard against aliasing and downsamples the result. When using the FIR filter, decimate filters the input sequence in only one direction. This conserves memory and is useful for working with long sequences. In the IIR case, decimate applies the filter in the forward and reverse directions using filtfilt to remove phase distortion. In effect, this process doubles the filter order. In both cases, the function minimizes transient effects at both ends of the signal by matching endpoint conditions\\\\
+Data transmitted per unit time is much more increased and the speed of transmission or
+the speed of speech is increased. Another thing we observed by decimating by 8 is that
+the amplitude of frequency magnitude spectrum is got lowered from amplitude of original
+frequency magnitude spectrum.\\\\
+For example, if we take any sample point lets say at 0.1,
+the amplitude of original frequency magnitude spectrum at that sample point is almost
+30dB but when decimated by 8 the amplitude of decimated frequency magnitude
+spectrum goes to 18dB. The speech is played so fast that the speech is almost impossible
+to understand, time is much more reduced as shown in the Fig.\ref{result5}.
+
+\begin{figure}[H]  %h=positioning
+\begin{center}
+\includegraphics[scale=0.90]{Chapter4/result5}
+\caption{Comparison of Frequency Spectrum and Time Domain Graph of Input Signal After Decimating by 8}
+\label{result5}
+\end{center}
+\end{figure}
+
+This filter has a normalized cutoff frequency of 0.8/r and a passband ripple of 0.05 dB. Sometimes, the specified filter order produces passband distortion due to round-off errors accumulated from the convolutions needed to create the transfer function. decimate automatically reduces the filter order when distortion causes the magnitude response at the cutoff frequency to differ from the ripple by more than $1/10^6$.\\
+When the 'fir' option is chosen, decimate uses fir1 to design a lowpass FIR filter with cutoff frequency $1/r$.\\\\
+Data transmitted per unit time is so much increased Another thing we observed by
+decimating by 16 is that the amplitude of frequency magnitude spectrum is got lowered
+from amplitude of original frequency magnitude spectrum.\\\\
+For example, if we take any sample point let’s say at 0.1, the amplitude of original frequency magnitude spectrum at
+that sample point is almost 30dB but when decimated by 16 the amplitude of decimated
+frequency magnitude spectrum almost goes to 1dB. The rate of speech is so less that the
+speech is impossible to understand, time is much more reduced as shown in the Fig. \ref{result6}.
+
+\begin{figure}[H]  %h=positioning
+\begin{center}
+\includegraphics[scale=0.90]{Chapter4/result6}
+\caption{Comparison of Frequency Spectrum and Time Domain Graph of Input Signal After Decimating by 16}
+\label{result6}
+\end{center}
+\end{figure}
